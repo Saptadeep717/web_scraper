@@ -1,3 +1,63 @@
+# X Trending Data Fetcher using Tor
+
+The project fetches trending data from X  using Tor to mask the real IP address. The data is saved in a MongoDB database and displayed in a table format on a local server.
+
+## Features
+
+- Fetches trending data from X.
+- Uses Tor to hide the real IP address.
+- Saves fetched data in MongoDB with the following structure:
+  ```json
+  {
+    "_id": {
+      "$oid": "677e7a40a8171c8753fac5fa"
+    },
+    "ipAddress": "178.20.55.182",
+    "fetchedAt": {
+      "$date": "2025-01-08T13:14:40.854Z"
+    },
+    "trends": [
+      {
+        "name": "#Retro",
+        "posts": "46.2K posts",
+        "_id": {
+          "$oid": "677e7a40a8171c8753fac5fb"
+        }
+      },
+      {
+        "name": "#Modi4ViksitAndhra",
+        "posts": "5,797 posts",
+        "_id": {
+          "$oid": "677e7a40a8171c8753fac5fc"
+        }
+      },
+      {
+        "name": "#सतभक्ति_से_लाभ",
+        "posts": "23.5K posts",
+        "_id": {
+          "$oid": "677e7a40a8171c8753fac5fd"
+        }
+      },
+      {
+        "name": "Sa True Story YouTube Channel",
+        "posts": "20K posts",
+        "_id": {
+          "$oid": "677e7a40a8171c8753fac5fe"
+        }
+      },
+      {
+        "name": "#Maaye_AnthemForTheHeroes",
+        "posts": "1,509 posts",
+        "_id": {
+          "$oid": "677e7a40a8171c8753fac5ff"
+        }
+      },
+    ],
+    "__v": 0
+  }
+  ```
+
+
 
 # Project Setup with Tor Integration
 
@@ -76,7 +136,7 @@ Use Tor network to fetch data while hiding your real IP. Follow these steps to i
    - **On Windows**, the `torrc` file is usually located in `C:\Users\YourUserName\AppData\Roaming\tor\` or the installation directory.
 
    Open the `torrc` file and add the following lines to enable the control port:
-   
+
    if not then use `sudo mkdir -p /usr/local/etc/tor`  
 
    ```plaintext
