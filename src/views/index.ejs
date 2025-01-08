@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f8fa;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .trends-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .trends-table th, .trends-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .trends-table th {
+            background-color: #1da1f2;
+            color: white;
+        }
+        .ip-address {
+            color: #657786;
+            margin-bottom: 20px;
+        }
+        .fetched-date {
+            color: #657786;
+            margin-bottom: 20px;
+        }
+        .error {
+            color: #e0245e;
+            padding: 10px;
+            background-color: #ffd1d1;
+            border-radius: 5px;
+        }
+        .fetch-button {
+            background-color: #1da1f2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .fetch-button:hover {
+            background-color: #1991da;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter Trends</h1>
+        
+        <% if (error) { %>
+            <div class="error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (!trends) { %>
+            <p>Click the button below to fetch current Indian X Trending topics.</p>
+            <a href="/api/v1/trends" class="fetch-button">Fetch Trends</a>
+        <% } else { %>
+            <div class="fetched-date">
+                Trend fetched Date & Time: <%= fetchedDate %>
+            </div>
+            <div class="ip-address">
+                Current IP: <%= ipAddress %>
+            </div>
+            <h2>Top 7 X Trending in India:</h2>
+            <table class="trends-table">
+                <thead>
+                    <tr>
+                        <th>Trend Name</th>
+                        <th>Posts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% trends.forEach(trend => { %>
+                        <tr>
+                            <td><%= trend.name %></td>
+                            <td><%= trend.posts %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            
+            <br>
+            <a href="/api/v1/trends" class="fetch-button">Fetch Again</a>
+        <% } %>
+    </div>
+</body>
+</html>

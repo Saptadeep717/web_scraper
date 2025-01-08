@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .error-container {
+            background-color: #ffd1d1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .home-link {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1da1f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Error</h1>
+        <p><%= error %></p>
+        <a href="/" class="home-link">Return Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "scrap-trends",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "chromedriver": "^131.0.4",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "net": "^1.0.2",
+    "request-promise": "^4.2.6",
+    "selenium-webdriver": "^4.27.0",
+    "tor-request": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
