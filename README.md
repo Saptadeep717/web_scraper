@@ -104,6 +104,7 @@ Use Tor network to fetch data while hiding your real IP. Follow these steps to i
    curl --socks5 127.0.0.1:9050 https://check.torproject.org
    ```
 
+   You may heve to run 1-2 times in windows.
    You should see confirmation that you are using Tor.
 
 ---
