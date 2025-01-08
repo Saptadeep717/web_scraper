@@ -76,6 +76,7 @@ Use Tor network to fetch data while hiding your real IP. Follow these steps to i
    - **On Windows**, the `torrc` file is usually located in `C:\Users\YourUserName\AppData\Roaming\tor\` or the installation directory.
 
    Open the `torrc` file and add the following lines to enable the control port:
+   
    if not then use `sudo mkdir -p /usr/local/etc/tor`  
 
    ```plaintext
@@ -142,11 +143,6 @@ Use Tor network to fetch data while hiding your real IP. Follow these steps to i
 ---
 
 
-1. **Tor not working with Node.js**:
-   - Ensure that the Tor service is running and that your Node.js application is properly routing requests through the Tor SOCKS5 proxy.
-   - Verify that your `torrc` file has the correct configuration for the Control Port and Exit Nodes.
-
-2. **Cannot reach localhost:3000**:
    - Ensure that your application is running. If there are any errors in the terminal, fix them accordingly.
    - Make sure port 3000 is not being blocked by any firewall or another service.
 
