@@ -31,27 +31,6 @@ The project fetches trending data from X  using Tor to mask the real IP address.
           "$oid": "677e7a40a8171c8753fac5fc"
         }
       },
-      {
-        "name": "#सतभक्ति_से_लाभ",
-        "posts": "23.5K posts",
-        "_id": {
-          "$oid": "677e7a40a8171c8753fac5fd"
-        }
-      },
-      {
-        "name": "Sa True Story YouTube Channel",
-        "posts": "20K posts",
-        "_id": {
-          "$oid": "677e7a40a8171c8753fac5fe"
-        }
-      },
-      {
-        "name": "#Maaye_AnthemForTheHeroes",
-        "posts": "1,509 posts",
-        "_id": {
-          "$oid": "677e7a40a8171c8753fac5ff"
-        }
-      },
     ],
     "__v": 0
   }
